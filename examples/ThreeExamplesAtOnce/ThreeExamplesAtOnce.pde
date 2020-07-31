@@ -15,11 +15,16 @@
 
 #include <TimedAction.h>
 
+void blink();
 //this initializes a TimedAction object that will change the state of an LED every second.
 TimedAction blinkAction 		=	TimedAction(1000,blink);
+
+void physicalPixel();
 //this initializes a TimedAction object that will change the state of an LED 
 //according to the serial buffer contents, every 50 milliseconds
 TimedAction physicalPixelAction = 	TimedAction(50,physicalPixel);
+
+void asciiTable();
 //this initializes a TimedAction object that will write tha ascii table to the serial every ten seconds
 TimedAction asciiTableAction 	= 	TimedAction(10000,asciiTable); 
 
